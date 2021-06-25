@@ -125,12 +125,12 @@ function booking_form(){
 			if($admin_email) {
 				$subject = 'Booking submitted successfully';
 				$admin_message = 'Hi Admin '.$vehicle_name. ' booking is submiited by '.$first_name.' '.$last_name;
-				wp_mail($admin_email, $subject, $message);
+				wp_mail($admin_email, $subject, $admin_message);
 			} 
 			if($email_id) {
 				$subject = 'Booking submitted successfully';
-				$message = 'Hi '.$first_name.' '.$last_name.' Your booking is pending';
-				wp_mail($email_id, $subject, $message);
+				$umessage = 'Hi '.$first_name.' '.$last_name.' Your booking is pending';
+				wp_mail($email_id, $subject, $umessage);
 			}
 			
 			$message = array('msg'=>'Bokking Submitted Successfully', 'status'=>'success');
